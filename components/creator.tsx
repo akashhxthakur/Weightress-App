@@ -5,6 +5,7 @@ import {
   Text,
   TextInput,
   TouchableHighlight,
+  TouchableOpacity,
   View,
 } from 'react-native';
 import { SaveWeight } from '../data/helpers';
@@ -36,12 +37,12 @@ const Creator: FC<{
         <View style={creatorStyles.modalView}>
           <View style={creatorStyles.topActions}>
             <Text>Add your weight</Text>
-            <TouchableHighlight
+            <TouchableOpacity
               onPress={() => {
                 onHideCreator();
               }}>
               <Text style={creatorStyles.topCloseButton}>×</Text>
-            </TouchableHighlight>
+            </TouchableOpacity>
           </View>
           <TextInput
             style={creatorStyles.input}
