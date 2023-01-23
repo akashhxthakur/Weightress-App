@@ -3,7 +3,7 @@ import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
 import Header from './components/header';
 import Chart from './components/chart';
 import Creator from './components/creator';
-
+import SyncIndicator from './components/sync-indicator';
 
 const App = () => {
   const [showCreator, setShowCreator] = useState<boolean>(false);
@@ -11,6 +11,7 @@ const App = () => {
     <>
       <StatusBar />
       <SafeAreaView>
+        <SyncIndicator />
         <ScrollView contentInsetAdjustmentBehavior="automatic">
           <Header onOpenCreator={() => setShowCreator(true)} />
           <Creator
